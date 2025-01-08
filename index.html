@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Claude</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+        }
+
+        .gallery-item {
+            margin-bottom: 30px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+            color: #0d6efd !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <img src="pp.jpeg" alt="Profile Picture" class="profile-img mb-4">
+            <h1 id="greeting">Loading...</h1>
+            <p class="lead">Full Stack Developer & UI/UX Designer</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Tentang Saya</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Pengalaman</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <h5>Mahasiswi - Universitas PGRI Semarang</h5>
+                            <p>2023 - Sekarang</p>
+                        </li>
+                        <li class="mb-3">
+                            <h5>Pelajar - SMK N 2 PATI</h5>
+                            <p>2019 - 2022</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Keterampilan</h3>
+                    <div class="mb-3">
+                        <p>HTML/CSS</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <p>JavaScript</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <p>React</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Galeri Proyek</h2>
+            <div class="row">
+                <div class="col-md-4 gallery-item">
+                    <img src="1.webp" alt="Project 1">
+                    <h4 class="mt-3">E-Commerce Website</h4>
+                    <p>Website e-commerce dengan fitur lengkap menggunakan React dan Node.js</p>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="2.png" alt="Project 2">
+                    <h4 class="mt-3">Mobile App</h4>
+                    <p>Aplikasi mobile untuk tracking kesehatan menggunakan React Native</p>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <img src="3.webp" alt="Project 3">
+                    <h4 class="mt-3">Portfolio Website</h4>
+                    <p>Website portfolio responsif dengan animasi modern</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Kontak</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h3>Informasi Kontak</h3>
+                    <p><i class="bi bi-envelope"></i> edinarsaadah024@gmail.com</p>
+                    <p><i class="bi bi-phone"></i> 081390973295</p>
+                    <p><i class="bi bi-geo-alt"></i> Pati, Indonesia</p>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p id="current-date"></p>
+        <p>© 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Greeting based on time of day
+        function setGreeting() {
+            const hour = new Date().getHours();
+            let greeting;
+            
+            if (hour < 12) {
+                greeting = "Selamat Pagi!";
+            } else if (hour < 15) {
+                greeting = "Selamat Siang!";
+            } else if (hour < 18) {
+                greeting = "Selamat Sore!";
+            } else {
+                greeting = "Selamat Malam!";
+            }
+            
+            document.getElementById("greeting").textContent = greeting;
+        }
+
+        // Set current date
+        function setCurrentDate() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const date = new Date().toLocaleDateString('id-ID', options);
+            document.getElementById("current-date").textContent = date;
+        }
+
+        // Update active nav link based on scroll position
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                
+                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    navLinks.forEach(link => {
+                        link.classList.remove("active");
+                        if (link.getAttribute("href") === "#" + section.id) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+            });
+        }
+
+        // Initialize
+        setGreeting();
+        setCurrentDate();
+        
+        // Event listeners
+        window.addEventListener("scroll", updateActiveNavLink);
+        
+        // Update greeting and date every minute
+        setInterval(() => {
+            setGreeting();
+            setCurrentDate();
+        }, 60000);
+    </script>
+</body>
+</html>
